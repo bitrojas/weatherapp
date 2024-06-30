@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white_snow"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbalRL"
+        android:background="@color/dark_sea"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:id="@+id/txt_saludo"
+            android:textColor="@color/dark_red"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="@string/st_saludo"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/fragmentFL"
+        android:layout_above="@+id/bottomBar"
+        android:layout_below="@id/toolbalRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <Button
+            android:id="@+id/pronostico"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="8dp"
+            android:drawableLeft="@drawable/ic_clima"
+            android:text="@string/st_pronostico"
+            android:layout_width="150dp"
+            android:layout_height="50dp"/>
+
+        <Spinner
+            android:id="@+id/sp_ciudades"
+            android:layout_below="@id/pronostico"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

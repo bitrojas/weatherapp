@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Weather App - Java</string>
+    <string name="st_saludo">Bienvenido a la Aplicación del Clima</string>
+    <string name="st_pronostico">Pronóstico</string>
+    <string name="st_ciudades">Ciudades</string>
+    <string name="opt_email">Continuar con Email</string>
+    <string name="opt_google">Continuar con Google</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_Email">Correo Electrónico</string>
+    <string name="txt_Password">Contraseña</string>
+    <string name="btn_Ingresar">Ingresar</string>
+    <string name="txt_sin_cuenta">¿No tienes Cuenta?</string>
+    <string name="txt_registrarse">Registrarse</string>
+</resources>

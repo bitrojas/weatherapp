@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "356826925073",
+    "project_id": "weather-app-77a01",
+    "storage_bucket": "weather-app-77a01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356826925073:android:ab83d11e3ea660bb6589b0",
+        "android_client_info": {
+          "package_name": "com.orojas.weatherapp_java"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuZCj0RUDdNY7HYyhoAytLTTHIHo1MCeY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
