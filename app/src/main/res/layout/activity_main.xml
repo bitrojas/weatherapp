@@ -1,62 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/white_snow"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/st_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/st_saludo"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
 
-    <RelativeLayout
-        android:id="@+id/toolbalRL"
-        android:background="@color/dark_sea"
-        android:layout_width="match_parent"
-        android:layout_height="55dp">
-
-        <TextView
-            android:id="@+id/txt_saludo"
-            android:textColor="@color/dark_red"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:text="@string/st_saludo"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    </RelativeLayout>
-
-    <FrameLayout
-        android:id="@+id/fragmentFL"
-        android:layout_above="@+id/bottomBar"
-        android:layout_below="@id/toolbalRL"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
-    <RelativeLayout
-        android:id="@+id/bottomBar"
+    <Button
+        android:id="@+id/btn_ver_pronostico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Ver Pronóstico"/>
+
+    <Spinner
+        android:id="@+id/spinner_cities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <fragment
+        android:id="@+id/map_fragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-        <Button
-            android:id="@+id/pronostico"
-            android:layout_centerHorizontal="true"
-            android:drawablePadding="8dp"
-            android:drawableLeft="@drawable/ic_clima"
-            android:text="@string/st_pronostico"
-            android:layout_width="150dp"
-            android:layout_height="50dp"/>
-
-        <Spinner
-            android:id="@+id/sp_ciudades"
-            android:layout_below="@id/pronostico"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="5dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </RelativeLayout>
-
-
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/btn_ver_pronostico"
+        android:layout_below="@id/st_titulo"/>
 </RelativeLayout>
