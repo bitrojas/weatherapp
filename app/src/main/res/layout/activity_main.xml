@@ -2,37 +2,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:background="@color/dark_red"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/st_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/dark_sea"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="@string/st_saludo"
         android:textSize="24sp"
+        android:layout_marginBottom="25dp"
         android:textStyle="bold"/>
 
-    <Button
-        android:id="@+id/btn_ver_pronostico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Ver Pronóstico"/>
 
-    <Spinner
-        android:id="@+id/spinner_cities"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:id="@+id/bottomLY"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <Button
+            android:id="@+id/btn_ver_pronostico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/st_pronostico"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="16dp"/>
+
+
+        <Spinner
+            android:id="@+id/spinner_cities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@id/btn_ver_pronostico"
+            android:layout_marginStart="8dp"/>
+    </RelativeLayout>
+
 
     <fragment
         android:id="@+id/map_fragment"
@@ -40,6 +56,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:layout_above="@id/btn_ver_pronostico"
+        android:layout_above="@id/bottomLY"
         android:layout_below="@id/st_titulo"/>
+    <FrameLayout
+        android:id="@+id/weather_fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:background="@android:color/white"/>
 </RelativeLayout>

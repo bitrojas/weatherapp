@@ -11,4 +11,6 @@
     <string name="btn_Ingresar">Ingresar</string>
     <string name="txt_sin_cuenta">¿No tienes Cuenta?</string>
     <string name="txt_registrarse">Registrarse</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
